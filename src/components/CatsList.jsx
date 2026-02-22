@@ -1,47 +1,18 @@
-const cats = [
-  {
-    id: 1,
-    name: 'Frisket',
-    trait: 'Mother of all cats',
-    imagePath: '../../public/mike.jpg'
-  },
-  {
-    id: 2,
-    name: 'Chase',
-    trait: 'Very good boi',
-    imagePath: '../../public/bravo.jpg'
-  },
-  {
-    id: 3,
-    name: 'Leia',
-    trait: 'Enjoys naps',
-    imagePath: '../../public/alpha.jpg'
-  },
-  {
-    id: 4,
-    name: 'Pupi',
-    trait: 'Loves cheese',
-    imagePath: '../../public/charlie.jpg'
-  },
-  {
-    id: 5,
-    name: 'Russ',
-    trait: 'Ready to save the world',
-    imagePath: '../../public/lima.jpg'
-  },
-  {
-    id: 6,
-    name: 'Yoko',
-    trait: 'Ready for anything',
-    imagePath: '../../public/oscar.jpg'
-  }
-];
+// import { cats } from '../data/cats';
 
-export function CatsList() {
+export function CatsList({ cats }) {
   return (
     <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {cats.map((cat) => (
-        <li
+        <CatsCard key={cat.id} cat={cat} />
+      ))}
+    </ul>
+  );
+}
+
+function CatsCard({ cat }) {
+  return(
+    <li
           key={cat.id}
           className="overflow-clip rounded-lg bg-white shadow-md ring ring-black/5 hover:-translate-y-0.5"
         >
@@ -78,7 +49,5 @@ export function CatsList() {
             </button>
           </div>
         </li>
-      ))}
-    </ul>
-  );
+  )
 }

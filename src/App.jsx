@@ -5,6 +5,8 @@ import { Search } from './components/Search.jsx'
 import { Shortlist } from './components/Shortlist.jsx'
 import { CatsList } from './components/CatsList.jsx'
 import { NewCatsForm } from './components/NewCatsForm.jsx'
+
+import { cats } from './data/cats'
  
 export function App() {
     return(
@@ -26,7 +28,7 @@ function Main() {
                 <Search />
                 <Shortlist />
             </div>
-            <CatsList />
+            <CatsList cats={cats} />
             <NewCatsForm />
         </main>
     )
