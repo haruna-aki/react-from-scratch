@@ -1,6 +1,8 @@
 // import { cats } from '../data/cats';
 
-export function CatsList({ cats }) {
+import { type Cat } from '../types';
+
+export function CatsList({ cats }: { cats: Cat[] }) {
   return (
     <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {cats.map((cat) => (
@@ -10,7 +12,12 @@ export function CatsList({ cats }) {
   );
 }
 
-function CatsCard({ cat }) {
+// ts check step
+type CatCardProps = {
+  cat: Cat;
+};
+
+function CatsCard({ cat }: CatCardProps) {
   return(
     <li
           key={cat.id}
@@ -25,7 +32,7 @@ function CatsCard({ cat }) {
             <div className="flex items-center gap-2">
               <p className="font-semibold">{cat.name}</p>
               <span className="text-slate-300">·</span>
-              <p className="text-slate-500">{cat.trait}</p>
+              <p className="text-slate-500">{cat.vibe}</p>
             </div>
             <button className="group">
               <svg

@@ -1,10 +1,10 @@
-import { PageWrapper } from './components/PageWrapper.jsx'
-import { Container } from './components/Container.jsx'
-import { Header } from './components/Header.jsx'
-import { Search } from './components/Search.jsx'
-import { Shortlist } from './components/Shortlist.jsx'
-import { CatsList } from './components/CatsList.jsx'
-import { NewCatsForm } from './components/NewCatsForm.jsx'
+import { PageWrapper } from './components/PageWrapper'
+import { Container } from './components/Container'
+import { Header } from './components/Header'
+import { Search } from './components/Search'
+import { Shortlist } from './components/Shortlist'
+import { CatsList } from './components/CatsList'
+import { NewCatsForm } from './components/NewCatsForm'
 
 import { cats } from './data/cats'
  
